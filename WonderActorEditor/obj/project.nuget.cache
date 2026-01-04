@@ -1,17 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "Cq7hXv9hTyE=",
+  "dgSpecHash": "PfykyBXe4sc=",
   "success": true,
   "projectFilePath": "C:\\Users\\marvi\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\WonderActorEditor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marvi\\.nuget\\packages\\imgui.net\\1.89.2\\imgui.net.1.89.2.nupkg.sha512",
     "C:\\Users\\marvi\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\2.0.3\\microsoft.dotnet.platformabstractions.2.0.3.nupkg.sha512",
     "C:\\Users\\marvi\\.nuget\\packages\\microsoft.extensions.dependencymodel\\2.0.3\\microsoft.extensions.dependencymodel.2.0.3.nupkg.sha512",
+    "C:\\Users\\marvi\\.nuget\\packages\\nativefiledialognet\\2.0.2\\nativefiledialognet.2.0.2.nupkg.sha512",
     "C:\\Users\\marvi\\.nuget\\packages\\nativelibraryloader\\1.0.13\\nativelibraryloader.1.0.13.nupkg.sha512",
     "C:\\Users\\marvi\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\marvi\\.nuget\\packages\\polysharp\\1.10.0\\polysharp.1.10.0.nupkg.sha512",
     "C:\\Users\\marvi\\.nuget\\packages\\sharpgen.runtime\\2.0.0-beta.13\\sharpgen.runtime.2.0.0-beta.13.nupkg.sha512",
     "C:\\Users\\marvi\\.nuget\\packages\\sharpgen.runtime.com\\2.0.0-beta.13\\sharpgen.runtime.com.2.0.0-beta.13.nupkg.sha512",
+    "C:\\Users\\marvi\\.nuget\\packages\\sixlabors.imagesharp\\3.1.5\\sixlabors.imagesharp.3.1.5.nupkg.sha512",
     "C:\\Users\\marvi\\.nuget\\packages\\veldrid\\4.9.0\\veldrid.4.9.0.nupkg.sha512",
     "C:\\Users\\marvi\\.nuget\\packages\\veldrid.imgui\\5.89.2-ga121087cad\\veldrid.imgui.5.89.2-ga121087cad.nupkg.sha512",
     "C:\\Users\\marvi\\.nuget\\packages\\veldrid.metalbindings\\4.9.0\\veldrid.metalbindings.4.9.0.nupkg.sha512",
@@ -34,6 +36,30 @@
       "warningLevel": 1,
       "filePath": "C:\\Users\\marvi\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\WonderActorEditor.csproj",
       "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'SixLabors.ImageSharp' 3.1.5 has a known high severity vulnerability, https://github.com/advisories/GHSA-2cmq-823j-5qj8",
+      "projectPath": "C:\\Users\\marvi\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\WonderActorEditor.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\marvi\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\WonderActorEditor.csproj",
+      "libraryId": "SixLabors.ImageSharp",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "message": "Package 'SixLabors.ImageSharp' 3.1.5 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-rxmq-m78w-7wmc",
+      "projectPath": "C:\\Users\\marvi\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\WonderActorEditor.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\marvi\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\WonderActorEditor.csproj",
+      "libraryId": "SixLabors.ImageSharp",
       "targetGraphs": [
         "net10.0"
       ]

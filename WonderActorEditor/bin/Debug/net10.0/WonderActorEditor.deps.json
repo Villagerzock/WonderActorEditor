@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v10.0": {
       "WonderActorEditor/1.0.0": {
         "dependencies": {
+          "NativeFileDialogNET": "2.0.2",
+          "SixLabors.ImageSharp": "3.1.5",
           "Veldrid": "4.9.0",
           "Veldrid.ImGui": "5.89.2-ga121087cad",
           "Veldrid.StartupUtilities": "4.9.0"
@@ -66,6 +68,36 @@
           }
         }
       },
+      "NativeFileDialogNET/2.0.2": {
+        "runtime": {
+          "lib/net8.0/NativeFileDialogNET.dll": {
+            "assemblyVersion": "2.0.2.0",
+            "fileVersion": "2.0.2.0"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/nfd.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-arm64/native/nfd.dylib": {
+            "rid": "osx-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/nfd.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/nfd.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
       "NativeLibraryLoader/1.0.13": {
         "dependencies": {
           "Microsoft.Extensions.DependencyModel": "2.0.3"
@@ -101,6 +133,14 @@
           "lib/net7.0/SharpGen.Runtime.COM.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "SixLabors.ImageSharp/3.1.5": {
+        "runtime": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.1.5.0"
           }
         }
       },
@@ -289,6 +329,13 @@
       "path": "microsoft.extensions.dependencymodel/2.0.3",
       "hashPath": "microsoft.extensions.dependencymodel.2.0.3.nupkg.sha512"
     },
+    "NativeFileDialogNET/2.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-enrTP4XkENdRz16rKZQlC6x7DPRFY4iHc9rsS0IXEFg8VK50cmgL4pQN4EwVtCWWCcPV7ZrBTOjNrIwLVXfxPA==",
+      "path": "nativefiledialognet/2.0.2",
+      "hashPath": "nativefiledialognet.2.0.2.nupkg.sha512"
+    },
     "NativeLibraryLoader/1.0.13": {
       "type": "package",
       "serviceable": true,
@@ -316,6 +363,13 @@
       "sha512": "sha512-H22LsE3XTIOevf2TJgPgPnfYmjMlCtN+QYZVxzXlgTrgG2jHSTUTKZpIMPbKliLJGCEnDfX6yvBJvya0/xRTkA==",
       "path": "sharpgen.runtime.com/2.0.0-beta.13",
       "hashPath": "sharpgen.runtime.com.2.0.0-beta.13.nupkg.sha512"
+    },
+    "SixLabors.ImageSharp/3.1.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lNtlq7dSI/QEbYey+A0xn48z5w4XHSffF8222cC4F4YwTXfEImuiBavQcWjr49LThT/pRmtWJRcqA/PlL+eJ6g==",
+      "path": "sixlabors.imagesharp/3.1.5",
+      "hashPath": "sixlabors.imagesharp.3.1.5.nupkg.sha512"
     },
     "Veldrid/4.9.0": {
       "type": "package",

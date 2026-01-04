@@ -3,14 +3,25 @@ using ImGuiNET;
 using Veldrid;
 using Veldrid.Sdl2;
 using Veldrid.StartupUtilities;
+using NativeFileDialogNET;
 
 namespace WonderActorEditor
 {
     public static class Program
     {
-	    private static float _value = 0.5f;
-	    
-	    private static bool _render_file_viewer = true;
+	    private static string? openFolder
+	    {
+		    get;
+		    set
+		    {
+			    if (field == value || value == null) return;
+			    field = value;
+			    _browser.SetRoot(value);
+		    }
+	    }
+
+	    private static ImGuiFileBrowser _browser = new ImGuiFileBrowser(openFolder); // oder dein Projektpfad
+
 	    
         public static void Main(string[] args)
         {
@@ -108,8 +119,9 @@ namespace WonderActorEditor
 
         private static void DrawWindows()
         {
-	        if (_render_file_viewer && ImGui.Begin("FileViewer",ref _render_file_viewer))
+	        if (openFolder != null && ImGui.Begin("FileViewer"))
 	        {
+		        _browser.Draw();
 		        ImGui.End();
 	        }
         }
@@ -146,10 +158,7 @@ namespace WonderActorEditor
 		        if (ImGui.BeginMenu("File"))
 		        {
 			        if (ImGui.MenuItem("Exit")) window.Close();
-			        if (ImGui.MenuItem("Open Folder"))
-			        {
-				        _render_file_viewer = true;
-			        }
+			        if (ImGui.MenuItem("Open Folder")) OpenFolderDialog();
 			        ImGui.EndMenu();
 		        }
 		        ImGui.EndMenuBar();
@@ -158,5 +167,17 @@ namespace WonderActorEditor
 	        ImGui.End();
         }
 
+        private static void OpenFolderDialog()
+        {
+	        var dialog = new NativeFileDialog()
+		        .SelectFolder();
+
+	        if (dialog.Open(out string? result) == DialogResult.Okay)
+	        {
+		        Console.WriteLine("Opening Folder: " + result);
+		        openFolder = result;
+	        }
+
+        }
     }
 }
