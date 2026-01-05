@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marvi\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\WonderActorEditor.csproj": {}
+    "C:\\Users\\Marvin\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\WonderActorEditor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marvi\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\WonderActorEditor.csproj": {
+    "C:\\Users\\Marvin\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\WonderActorEditor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marvi\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\WonderActorEditor.csproj",
+        "projectUniqueName": "C:\\Users\\Marvin\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\WonderActorEditor.csproj",
         "projectName": "WonderActorEditor",
-        "projectPath": "C:\\Users\\marvi\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\WonderActorEditor.csproj",
-        "packagesPath": "C:\\Users\\marvi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marvi\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\obj\\",
+        "projectPath": "C:\\Users\\Marvin\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\WonderActorEditor.csproj",
+        "packagesPath": "C:\\Users\\Marvin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Marvin\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\marvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Marvin\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\marvi\\.dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -88,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\marvi\\.dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Users\\Marvin\\.dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

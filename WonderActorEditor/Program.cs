@@ -9,18 +9,28 @@ namespace WonderActorEditor
 {
     public static class Program
     {
-	    private static string? openFolder
+	    public static string? openFolder
 	    {
 		    get;
 		    set
 		    {
 			    if (field == value || value == null) return;
 			    field = value;
-			    _browser.SetRoot(value);
+			    browser.SetRoot(value);
 		    }
 	    }
 
-	    private static ImGuiFileBrowser _browser = new ImGuiFileBrowser(openFolder); // oder dein Projektpfad
+	    public static string[] openFiles = {"test"};
+
+	    public static ImGuiFileBrowser browser = new ImGuiFileBrowser(openFolder); // oder dein Projektpfad
+	    private static ImGuiRenderable[] renderables =
+		    {
+			    new VillagerzockRenderable(),
+			    new CitraRenderable()
+		    };
+
+	    public static ImFontPtr defaultFont;
+	    public static ImFontPtr titleFont;
 
 	    
         public static void Main(string[] args)
@@ -61,10 +71,13 @@ namespace WonderActorEditor
 		var io = ImGui.GetIO();
 		io.Fonts.Clear();
 
-		io.Fonts.AddFontFromFileTTF("C:\\Windows\\Fonts\\segoeui.ttf", 18f);
+		defaultFont = io.Fonts.AddFontFromFileTTF("C:\\Windows\\Fonts\\segoeui.ttf", 18f);
+		titleFont = io.Fonts.AddFontFromFileTTF("C:\\Windows\\Fonts\\segoeui.ttf", 36f);
 		io.ConfigFlags |= ImGuiConfigFlags.DockingEnable | ImGuiConfigFlags.ViewportsEnable;
 
 		imgui.RecreateFontDeviceTexture(); // <- wichtig
+		
+		ImGui.PushFont(defaultFont);
 
 		// Resize handling
 		window.Resized += () =>
@@ -119,10 +132,9 @@ namespace WonderActorEditor
 
         private static void DrawWindows()
         {
-	        if (openFolder != null && ImGui.Begin("FileViewer"))
+	        for (int i = 0; i < renderables.Length; i++)
 	        {
-		        _browser.Draw();
-		        ImGui.End();
+		        renderables[i].render();
 	        }
         }
 
