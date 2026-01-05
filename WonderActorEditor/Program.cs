@@ -134,7 +134,7 @@ namespace WonderActorEditor
         {
 	        for (int i = 0; i < renderables.Length; i++)
 	        {
-		        renderables[i].render();
+		        renderables[i].Render();
 	        }
         }
 

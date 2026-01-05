@@ -4,8 +4,7 @@ namespace WonderActorEditor;
 
 public class CitraRenderable : ImGuiRenderable
 {
-    public void render()
+    public void Render()
     {
-        throw new NotImplementedException();
     }
 }

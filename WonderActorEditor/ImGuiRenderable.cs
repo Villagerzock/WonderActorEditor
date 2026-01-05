@@ -2,5 +2,5 @@
 
 public interface ImGuiRenderable
 {
-    void render();
+    void Render();
 }

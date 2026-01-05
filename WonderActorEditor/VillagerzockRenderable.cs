@@ -5,9 +5,8 @@ namespace WonderActorEditor;
 
 public class VillagerzockRenderable : ImGuiRenderable
 {
-    public void render()
+    public void Render()
     {
-        Console.WriteLine("Hiii");
         if (Program.openFolder != null && ImGui.Begin("FileViewer"))
         {
             Program.browser.Draw();
@@ -42,7 +41,7 @@ public class VillagerzockRenderable : ImGuiRenderable
                         ImGui.SameLine();
 
                         ImGui.BeginChild("##ActorComponents", new Vector2(secondPart, height), true);
-                        ImGui.Text("Components");
+                        ImGui.Button("+ Add Component", new Vector2(-1, 40));
                         ImGui.EndChild();
                     }
                     ImGui.EndTabItem();
