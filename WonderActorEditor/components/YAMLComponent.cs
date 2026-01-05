@@ -1,5 +1,6 @@
 ﻿using System.Numerics;
 using ImGuiNET;
+using Syroot.NintenTools.Byaml;
 
 namespace WonderActorEditor.components;
 
@@ -12,6 +13,7 @@ public class YAMLComponent : IComponent
     {
         ImGui.InputText("name##$"+id, ref name, 512);
         ImGui.InputTextMultiline("yamlValue##$" + id, ref this.value, 80000, new Vector2(-200,200));
+        
     }
 
     public string GetName()

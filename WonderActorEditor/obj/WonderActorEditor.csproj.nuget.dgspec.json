@@ -52,10 +52,6 @@
               "target": "Package",
               "version": "[3.1.5, )"
             },
-            "Syroot.NintenTools.Byaml": {
-              "target": "Package",
-              "version": "[3.0.0-alpha1, )"
-            },
             "Veldrid": {
               "target": "Package",
               "version": "[4.9.0, )"

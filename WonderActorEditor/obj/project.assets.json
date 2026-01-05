@@ -55,15 +55,6 @@
           "lib/netstandard1.6/Microsoft.Extensions.DependencyModel.dll": {}
         }
       },
-      "Microsoft.NETCore.Platforms/1.1.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/_._": {}
-        }
-      },
       "NativeFileDialogNET/2.0.2": {
         "type": "package",
         "compile": {
@@ -105,12 +96,6 @@
           "lib/netstandard2.0/NativeLibraryLoader.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "NETStandard.Library/1.6.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0"
         }
       },
       "Newtonsoft.Json/9.0.1": {
@@ -183,48 +168,6 @@
         },
         "build": {
           "build/SixLabors.ImageSharp.props": {}
-        }
-      },
-      "Syroot.BinaryData/5.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Syroot.BinaryData.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Syroot.BinaryData.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Syroot.Maths/1.5.1": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
-        },
-        "compile": {
-          "lib/netstandard1.1/Syroot.Maths.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.1/Syroot.Maths.dll": {}
-        }
-      },
-      "Syroot.NintenTools.Byaml/3.0.0-alpha1": {
-        "type": "package",
-        "dependencies": {
-          "Syroot.BinaryData": "5.0.0",
-          "Syroot.Maths": "1.5.1"
-        },
-        "compile": {
-          "lib/netstandard2.0/Syroot.NintenTools.Byaml.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Syroot.NintenTools.Byaml.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Veldrid/4.9.0": {
@@ -526,21 +469,6 @@
         "microsoft.extensions.dependencymodel.nuspec"
       ]
     },
-    "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
-      "type": "package",
-      "path": "microsoft.netcore.platforms/1.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-        "microsoft.netcore.platforms.nuspec",
-        "runtime.json"
-      ]
-    },
     "NativeFileDialogNET/2.0.2": {
       "sha512": "enrTP4XkENdRz16rKZQlC6x7DPRFY4iHc9rsS0IXEFg8VK50cmgL4pQN4EwVtCWWCcPV7ZrBTOjNrIwLVXfxPA==",
       "type": "package",
@@ -569,19 +497,6 @@
         "lib/netstandard2.0/NativeLibraryLoader.xml",
         "nativelibraryloader.1.0.13.nupkg.sha512",
         "nativelibraryloader.nuspec"
-      ]
-    },
-    "NETStandard.Library/1.6.1": {
-      "sha512": "WcSp3+vP+yHNgS8EV5J7pZ9IRpeDuARBPN28by8zqff1wJQXm26PVU8L3/fYLBJVU7BtDyqNVWq2KlCVvSSR4A==",
-      "type": "package",
-      "path": "netstandard.library/1.6.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "netstandard.library.1.6.1.nupkg.sha512",
-        "netstandard.library.nuspec"
       ]
     },
     "Newtonsoft.Json/9.0.1": {
@@ -684,49 +599,6 @@
         "sixlabors.imagesharp.128.png",
         "sixlabors.imagesharp.3.1.5.nupkg.sha512",
         "sixlabors.imagesharp.nuspec"
-      ]
-    },
-    "Syroot.BinaryData/5.0.0": {
-      "sha512": "kS0pFPNlpKSoKrLZM5SC3Z6gu2tqz9sROmeShUUNdib9tMWABy2qvtg8pA8mcDjaoAFGC1+0xMbpPm2SIry60w==",
-      "type": "package",
-      "path": "syroot.binarydata/5.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net452/Syroot.BinaryData.dll",
-        "lib/net452/Syroot.BinaryData.xml",
-        "lib/netstandard2.0/Syroot.BinaryData.dll",
-        "lib/netstandard2.0/Syroot.BinaryData.xml",
-        "syroot.binarydata.5.0.0.nupkg.sha512",
-        "syroot.binarydata.nuspec"
-      ]
-    },
-    "Syroot.Maths/1.5.1": {
-      "sha512": "kIQXfe1G5kdHsO8uFV/+FLaYfuSrX1wgT4HUadRGKDzx6K4TBoGuO/6XZF0BFgXV0mW/EKU6kN64qmokDGzepg==",
-      "type": "package",
-      "path": "syroot.maths/1.5.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/Syroot.Maths.dll",
-        "lib/netstandard1.1/Syroot.Maths.dll",
-        "syroot.maths.1.5.1.nupkg.sha512",
-        "syroot.maths.nuspec"
-      ]
-    },
-    "Syroot.NintenTools.Byaml/3.0.0-alpha1": {
-      "sha512": "etHJ5ak8fY5v1Wv/MJlzePXJzjettkh2lEplxDtGTOgwvRKtwv42UW1HeWpmjbj3144wBWV3SVFFt0L+GsCGtQ==",
-      "type": "package",
-      "path": "syroot.nintentools.byaml/3.0.0-alpha1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net461/Syroot.NintenTools.Byaml.dll",
-        "lib/net461/Syroot.NintenTools.Byaml.xml",
-        "lib/netstandard2.0/Syroot.NintenTools.Byaml.dll",
-        "lib/netstandard2.0/Syroot.NintenTools.Byaml.xml",
-        "syroot.nintentools.byaml.3.0.0-alpha1.nupkg.sha512",
-        "syroot.nintentools.byaml.nuspec"
       ]
     },
     "Veldrid/4.9.0": {
@@ -961,7 +833,6 @@
     "net10.0": [
       "NativeFileDialogNET >= 2.0.2",
       "SixLabors.ImageSharp >= 3.1.5",
-      "Syroot.NintenTools.Byaml >= 3.0.0-alpha1",
       "Veldrid >= 4.9.0",
       "Veldrid.ImGui >= 5.89.2-ga121087cad",
       "Veldrid.StartupUtilities >= 4.9.0",
@@ -1018,10 +889,6 @@
           "SixLabors.ImageSharp": {
             "target": "Package",
             "version": "[3.1.5, )"
-          },
-          "Syroot.NintenTools.Byaml": {
-            "target": "Package",
-            "version": "[3.0.0-alpha1, )"
           },
           "Veldrid": {
             "target": "Package",
