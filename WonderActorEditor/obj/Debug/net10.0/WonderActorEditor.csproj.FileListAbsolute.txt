@@ -98,3 +98,9 @@ C:\Users\Marvin\RiderProjects\WonderActorEditor\WonderActorEditor\obj\Debug\net1
 C:\Users\Marvin\RiderProjects\WonderActorEditor\WonderActorEditor\obj\Debug\net10.0\WonderActorEditor.pdb
 C:\Users\Marvin\RiderProjects\WonderActorEditor\WonderActorEditor\obj\Debug\net10.0\WonderActorEditor.genruntimeconfig.cache
 C:\Users\Marvin\RiderProjects\WonderActorEditor\WonderActorEditor\obj\Debug\net10.0\ref\WonderActorEditor.dll
+C:\Users\Marvin\RiderProjects\WonderActorEditor\WonderActorEditor\bin\Debug\net10.0\x64\libzstd.dll
+C:\Users\Marvin\RiderProjects\WonderActorEditor\WonderActorEditor\bin\Debug\net10.0\x86\libzstd.dll
+C:\Users\Marvin\RiderProjects\WonderActorEditor\WonderActorEditor\bin\Debug\net10.0\Syroot.BinaryData.dll
+C:\Users\Marvin\RiderProjects\WonderActorEditor\WonderActorEditor\bin\Debug\net10.0\Syroot.Maths.dll
+C:\Users\Marvin\RiderProjects\WonderActorEditor\WonderActorEditor\bin\Debug\net10.0\Syroot.NintenTools.Byaml.dll
+C:\Users\Marvin\RiderProjects\WonderActorEditor\WonderActorEditor\bin\Debug\net10.0\ZstdNet.dll

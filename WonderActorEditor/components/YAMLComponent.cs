@@ -11,7 +11,7 @@ public class YAMLComponent : IComponent
     public void Render(int id)
     {
         ImGui.InputText("name##$"+id, ref name, 512);
-        ImGui.InputTextMultiline("yamlValue##$" + id, ref this.value, 80000, new Vector2(-1,200));
+        ImGui.InputTextMultiline("yamlValue##$" + id, ref this.value, 80000, new Vector2(-200,200));
     }
 
     public string GetName()
@@ -21,5 +21,10 @@ public class YAMLComponent : IComponent
             return name;
         }
         return "YAML Component";
+    }
+
+    public string GetActorParamID()
+    {
+        return GetName();
     }
 }

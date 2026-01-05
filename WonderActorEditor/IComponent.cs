@@ -14,6 +14,8 @@ public interface IComponent
         }
         return this.GetType().Name;
     }
-    
+
+    string GetActorParamID();
+
     // Here Come Some More methods for Serialization Later
 }
