@@ -4,6 +4,8 @@ using Veldrid;
 using Veldrid.Sdl2;
 using Veldrid.StartupUtilities;
 using NativeFileDialogNET;
+using WonderActorEditor.actor;
+using WonderActorEditor.components;
 
 namespace WonderActorEditor
 {
@@ -20,7 +22,7 @@ namespace WonderActorEditor
 		    }
 	    }
 
-	    public static string[] openFiles = {"test"};
+	    public static Actor[] openFiles = {new Actor("test")};
 
 	    public static ImGuiFileBrowser browser = new ImGuiFileBrowser(openFolder); // oder dein Projektpfad
 	    private static ImGuiRenderable[] renderables =
@@ -29,6 +31,10 @@ namespace WonderActorEditor
 			    new CitraRenderable()
 		    };
 
+	    public static Type[] allComponentTypes =
+	    {
+			typeof(YAMLComponent)
+	    };
 	    public static ImFontPtr defaultFont;
 	    public static ImFontPtr titleFont;
 
