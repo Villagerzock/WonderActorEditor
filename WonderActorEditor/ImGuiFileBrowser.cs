@@ -1,4 +1,6 @@
-﻿namespace WonderActorEditor;
+﻿// INFO: This Class was made by ChatGPT for testing will be replaced before release
+
+namespace WonderActorEditor;
 
 using System;
 using System.Collections.Generic;
