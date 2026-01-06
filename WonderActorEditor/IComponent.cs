@@ -12,7 +12,7 @@ public interface IComponent
         ComponentData? data = this.GetType().GetCustomAttribute<ComponentData>();
         if (data != null)
         {
-            return data.name;
+            return data.Name;
         }
         return this.GetType().Name;
     }

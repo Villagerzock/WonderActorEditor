@@ -5,7 +5,7 @@ using YamlDotNet.RepresentationModel;
 
 namespace WonderActorEditor.components;
 
-[ComponentData("YAML Component", "Write Plain YML and add the ActorParam name, used if a specific ActorParam is not Implemented as a Component")]
+[ComponentData("YAML Component", "Write Plain YML and add the ActorParam name, used if a specific ActorParam is not Implemented as a Component", true)]
 public class YAMLComponent : IComponent
 {
     private string value = "";

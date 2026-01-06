@@ -32,6 +32,7 @@ public class VillagerzockRenderable : ImGuiRenderable
                         {
                             Program.openFiles.RemoveAt(i);
                             i--;
+                            ImGui.EndTabItem();
                             continue;
                         }
                         if (!shouldClose && currentActor.HasUnsavedChanges)
@@ -72,6 +73,11 @@ public class VillagerzockRenderable : ImGuiRenderable
                             
                             ImGui.BeginGroup();
                             component.Render(j, currentActor);
+                            if (ImGui.Button("Remove##$"+j+"$"+i))
+                            {
+                                currentActor.Components.RemoveAt(j);
+                                j--;
+                            }
                             ImGui.EndGroup();
                             
                             ImGui.EndGroup();
@@ -91,7 +97,7 @@ public class VillagerzockRenderable : ImGuiRenderable
             
         if (_addComponentTo != null)
         {
-            ImGui.SetNextWindowSize(new Vector2(300,400));
+            ImGui.SetNextWindowSize(new Vector2(700,400));
             bool open = true;
             if (ImGui.Begin("Add Component", ref open, ImGuiWindowFlags.NoResize | ImGuiWindowFlags.NoCollapse | ImGuiWindowFlags.NoDocking))
             {
@@ -103,22 +109,74 @@ public class VillagerzockRenderable : ImGuiRenderable
                 foreach (Type componentType in Program.allComponentTypes)
                 {
                     ComponentData? data = componentType.GetCustomAttribute<ComponentData>();
-                    if (data != null)
+                    if (data == null) continue;
+
+                    if (!data.HasMultiple && ActorAlreadyHasComponent(_addComponentTo, componentType)) continue;
+
+                    float paddingY = ImGui.GetStyle().FramePadding.Y;
+                    float spacingY = ImGui.GetStyle().ItemInnerSpacing.Y;
+
+// Textgrößen berechnen
+                    Vector2 nameSize = ImGui.CalcTextSize(data.Name);
+                    Vector2 descSize = ImGui.CalcTextSize(data.Description ?? "");
+
+// Höhe für 2 Zeilen + Padding
+                    float height =
+                        nameSize.Y +
+                        (data.Description != null ? (spacingY + descSize.Y) : 0f) +
+                        paddingY * 2f;
+
+// Volle Breite nutzen
+                    Vector2 size = new Vector2(0f, height);
+
+// Unsichtbares Label, damit ID eindeutig ist (wichtig bei gleichen Namen)
+                    string id = $"##addcomp_{componentType.FullName}";
+
+                    Vector2 startPos = ImGui.GetCursorScreenPos();
+
+                    bool clicked = ImGui.Selectable(id, false, ImGuiSelectableFlags.None, size);
+
+                    Vector2 textPos = startPos + new Vector2(ImGui.GetStyle().FramePadding.X, ImGui.GetStyle().FramePadding.Y);
+
+// Name
+                    ImGui.GetWindowDrawList().AddText(textPos, ImGui.GetColorU32(ImGuiCol.Text), data.Name);
+
+// Description darunter (etwas “disabled”-mäßig)
+                    if (!string.IsNullOrEmpty(data.Description))
                     {
-                        if (ImGui.Selectable(data.name))
-                        {
-                            IComponent? component = Activator.CreateInstance(componentType) as IComponent;
-                            if (component != null)
-                            {
-                                _addComponentTo?.Components.Add(component);
-                                _addComponentTo?.MarkUnsavedChanges();
-                            }
-                            _addComponentTo = null;
-                        }
+                        Vector2 descPos = textPos + new Vector2(0f, nameSize.Y + spacingY);
+                        ImGui.GetWindowDrawList().AddText(descPos, ImGui.GetColorU32(ImGuiCol.TextDisabled), data.Description);
                     }
+
+                    if (clicked)
+                    {
+                        if (Activator.CreateInstance(componentType) is IComponent component)
+                        {
+                            _addComponentTo?.Components.Add(component);
+                            _addComponentTo?.MarkUnsavedChanges();
+                        }
+
+                        _addComponentTo = null;
+                        ImGui.CloseCurrentPopup(); // falls du im Popup bist
+                    }
+
                 }
             }
             ImGui.End();
         }
+    }
+
+    public bool ActorAlreadyHasComponent(Actor? actor, Type componentType)
+    {
+        if (actor == null) return false;
+        foreach (IComponent component in  actor.Components)
+        {
+            if (component.GetType() == componentType)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
