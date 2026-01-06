@@ -35,3 +35,10 @@ The **Wonder Actor Editor** is a powerful modding tool designed to create and ed
 2. **Clone the Repository**
    ```bash
    git clone https://github.com/Villagerzock/WonderActorEditor.git
+
+# Images
+
+<img width="2560" height="1452" alt="image" src="https://github.com/user-attachments/assets/6bc13cc7-8724-4551-b392-8c30f8113b4c" />
+<img width="1404" height="806" alt="image" src="https://github.com/user-attachments/assets/d68c5982-25ef-4483-8758-b8d21de66016" />
+
+
