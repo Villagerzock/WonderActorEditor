@@ -92,8 +92,14 @@ public class VillagerzockRenderable : ImGuiRenderable
         if (_addComponentTo != null)
         {
             ImGui.SetNextWindowSize(new Vector2(300,400));
-            if (ImGui.Begin("Add Component", ImGuiWindowFlags.NoResize | ImGuiWindowFlags.NoCollapse | ImGuiWindowFlags.NoDocking))
+            bool open = true;
+            if (ImGui.Begin("Add Component", ref open, ImGuiWindowFlags.NoResize | ImGuiWindowFlags.NoCollapse | ImGuiWindowFlags.NoDocking))
             {
+                if (!open)
+                {
+                    _addComponentTo = null;
+                    return;
+                }
                 foreach (Type componentType in Program.allComponentTypes)
                 {
                     ComponentData? data = componentType.GetCustomAttribute<ComponentData>();

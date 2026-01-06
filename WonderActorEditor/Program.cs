@@ -33,7 +33,8 @@ namespace WonderActorEditor
 
 	    public static Type[] allComponentTypes =
 	    {
-			typeof(YAMLComponent)
+			typeof(YAMLComponent),
+			typeof(ModelBindParamComponent)
 	    };
 	    public static ImFontPtr defaultFont;
 	    public static ImFontPtr titleFont;
