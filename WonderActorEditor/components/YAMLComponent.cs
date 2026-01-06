@@ -1,6 +1,7 @@
 ﻿using System.Numerics;
 using ImGuiNET;
-using Syroot.NintenTools.Byaml;
+using WonderActorEditor.actor;
+using YamlDotNet.RepresentationModel;
 
 namespace WonderActorEditor.components;
 
@@ -9,11 +10,18 @@ public class YAMLComponent : IComponent
 {
     private string value = "";
     private string name = "";
-    public void Render(int id)
+    public void Render(int id, Actor parent)
     {
-        ImGui.InputText("name##$"+id, ref name, 512);
-        ImGui.InputTextMultiline("yamlValue##$" + id, ref this.value, 80000, new Vector2(-200,200));
+        string oldValue = value;
+        string oldName = name;
         
+        ImGui.InputText("name##$"+id, ref name, 512);
+        ImGui.InputTextMultiline("yamlValue##$" + id, ref value, 80000, new Vector2(-200,200));
+
+        if (oldValue != value || oldName != name)
+        {
+            parent.MarkUnsavedChanges();
+        }
     }
 
     public string GetName()
@@ -25,8 +33,24 @@ public class YAMLComponent : IComponent
         return "YAML Component";
     }
 
-    public string GetActorParamID()
+    public string GetActorParamId()
     {
         return GetName();
+    }
+
+    public YamlNode GetYAML()
+    {
+        return new YamlMappingNode
+        {
+            { "name", new YamlScalarNode("Bokoblin") },
+            { "health", new YamlScalarNode("120") },
+            {
+                "drops",
+                new YamlSequenceNode(
+                    new YamlScalarNode("horn"),
+                    new YamlScalarNode("fang")
+                )
+            }
+        };
     }
 }

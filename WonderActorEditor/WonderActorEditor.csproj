@@ -18,6 +18,8 @@
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
         
+        <PackageReference Include="YamlDotNet" Version="16.3.0" />
+        
         <PackageReference Include="ZstdNet" Version="1.4.5" />
     </ItemGroup>
     

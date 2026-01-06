@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3aJ6XCh6lcM=",
+  "dgSpecHash": "uUaMfgYEbE8=",
   "success": true,
   "projectFilePath": "C:\\Users\\Marvin\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\WonderActorEditor.csproj",
   "expectedPackageFiles": [
@@ -26,6 +26,7 @@
     "C:\\Users\\Marvin\\.nuget\\packages\\vortice.directx\\2.3.0\\vortice.directx.2.3.0.nupkg.sha512",
     "C:\\Users\\Marvin\\.nuget\\packages\\vortice.dxgi\\2.3.0\\vortice.dxgi.2.3.0.nupkg.sha512",
     "C:\\Users\\Marvin\\.nuget\\packages\\vortice.mathematics\\1.4.25\\vortice.mathematics.1.4.25.nupkg.sha512",
+    "C:\\Users\\Marvin\\.nuget\\packages\\yamldotnet\\16.3.0\\yamldotnet.16.3.0.nupkg.sha512",
     "C:\\Users\\Marvin\\.nuget\\packages\\zstdnet\\1.4.5\\zstdnet.1.4.5.nupkg.sha512"
   ],
   "logs": [

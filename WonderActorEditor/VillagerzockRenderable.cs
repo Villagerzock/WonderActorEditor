@@ -8,6 +8,7 @@ namespace WonderActorEditor;
 public class VillagerzockRenderable : ImGuiRenderable
 {
     private Actor? _addComponentTo = null;
+    private Actor? _closeAfterSaving = null;
     
     public void Render()
     {
@@ -21,10 +22,22 @@ public class VillagerzockRenderable : ImGuiRenderable
         {
             if (ImGui.BeginTabBar("openFiles"))
             {
-                for (int i = 0; i < Program.openFiles.Length; i++)
+                for (int i = 0; i < Program.openFiles.Count; i++)
                 {
-                    if (ImGui.BeginTabItem(Program.openFiles[i].Name))
+                    bool shouldClose = true;
+                    Actor currentActor = Program.openFiles[i];
+                    if (ImGui.BeginTabItem(currentActor.Name,ref shouldClose, currentActor.HasUnsavedChanges ? ImGuiTabItemFlags.UnsavedDocument : ImGuiTabItemFlags.None))
                     {
+                        if (!shouldClose && !currentActor.HasUnsavedChanges)
+                        {
+                            Program.openFiles.RemoveAt(i);
+                            i--;
+                            continue;
+                        }
+                        if (!shouldClose && currentActor.HasUnsavedChanges)
+                        {
+                            _closeAfterSaving = currentActor;
+                        }
                         float spacing = ImGui.GetStyle().ItemSpacing.X;
                         float firstPart = (ImGui.GetContentRegionAvail().X - spacing) * 0.15f;
                         float secondPart = (ImGui.GetContentRegionAvail().X - spacing) - firstPart;
@@ -37,7 +50,7 @@ public class VillagerzockRenderable : ImGuiRenderable
                         ImGui.Text("Here Comes A Model");
                         ImGui.EndChild();
                         ImGui.PushFont(Program.titleFont);
-                        ImGui.Text(Program.openFiles[i].Name);
+                        ImGui.Text(currentActor.Name);
                         ImGui.PushFont(Program.defaultFont);
 					        
                         ImGui.EndChild();
@@ -45,11 +58,11 @@ public class VillagerzockRenderable : ImGuiRenderable
                         ImGui.SameLine();
 
                         ImGui.BeginChild("##ActorComponents", new Vector2(secondPart, height), true);
-                        for (int j = 0; j < Program.openFiles[i].Components.Count; j++)
+                        for (int j = 0; j < currentActor.Components.Count; j++)
                         {
                             ImGui.BeginGroup();
                            
-                            IComponent component = Program.openFiles[i].Components[j];
+                            IComponent component = currentActor.Components[j];
                             
                             ImGui.PushFont(Program.titleFont);
                             ImGui.Text(component.GetName());
@@ -58,14 +71,14 @@ public class VillagerzockRenderable : ImGuiRenderable
                             ImGui.SameLine();
                             
                             ImGui.BeginGroup();
-                            component.Render(j);
+                            component.Render(j, currentActor);
                             ImGui.EndGroup();
                             
                             ImGui.EndGroup();
                         }
                         if (ImGui.Button("+ Add Component", new Vector2(-1, 40)))
                         {
-                            _addComponentTo = Program.openFiles[i];
+                            _addComponentTo = currentActor;
                         }
                         ImGui.EndChild();
                     }
@@ -73,32 +86,33 @@ public class VillagerzockRenderable : ImGuiRenderable
                 }
                 ImGui.EndTabBar();
             }
-
-            ImGui.End();
+        }
+        ImGui.End();
             
-            if (_addComponentTo != null)
+        if (_addComponentTo != null)
+        {
+            ImGui.SetNextWindowSize(new Vector2(300,400));
+            if (ImGui.Begin("Add Component", ImGuiWindowFlags.NoResize | ImGuiWindowFlags.NoCollapse | ImGuiWindowFlags.NoDocking))
             {
-                if (ImGui.Begin("Add Component"))
+                foreach (Type componentType in Program.allComponentTypes)
                 {
-                    foreach (Type componentType in Program.allComponentTypes)
+                    ComponentData? data = componentType.GetCustomAttribute<ComponentData>();
+                    if (data != null)
                     {
-                        ComponentData? data = componentType.GetCustomAttribute<ComponentData>();
-                        if (data != null)
+                        if (ImGui.Selectable(data.name))
                         {
-                            if (ImGui.Selectable(data.name))
+                            IComponent? component = Activator.CreateInstance(componentType) as IComponent;
+                            if (component != null)
                             {
-                                IComponent? component = Activator.CreateInstance(componentType) as IComponent;
-                                if (component != null)
-                                {
-                                    _addComponentTo?.Components.Add(component);
-                                }
-                                _addComponentTo = null;
+                                _addComponentTo?.Components.Add(component);
+                                _addComponentTo?.MarkUnsavedChanges();
                             }
+                            _addComponentTo = null;
                         }
                     }
-                    ImGui.End();
                 }
             }
+            ImGui.End();
         }
     }
 }

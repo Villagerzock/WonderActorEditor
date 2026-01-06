@@ -10,10 +10,10 @@
         "dependencies": {
           "NativeFileDialogNET": "2.0.2",
           "SixLabors.ImageSharp": "3.1.5",
-          "Syroot.NintenTools.Byaml": "3.0.0-alpha1",
           "Veldrid": "4.9.0",
           "Veldrid.ImGui": "5.89.2-ga121087cad",
           "Veldrid.StartupUtilities": "4.9.0",
+          "YamlDotNet": "16.3.0",
           "ZstdNet": "1.4.5"
         },
         "runtime": {
@@ -143,34 +143,6 @@
           "lib/net6.0/SixLabors.ImageSharp.dll": {
             "assemblyVersion": "3.0.0.0",
             "fileVersion": "3.1.5.0"
-          }
-        }
-      },
-      "Syroot.BinaryData/5.0.0": {
-        "runtime": {
-          "lib/netstandard2.0/Syroot.BinaryData.dll": {
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.0.0"
-          }
-        }
-      },
-      "Syroot.Maths/1.5.1": {
-        "runtime": {
-          "lib/netstandard1.1/Syroot.Maths.dll": {
-            "assemblyVersion": "1.5.1.0",
-            "fileVersion": "1.5.1.0"
-          }
-        }
-      },
-      "Syroot.NintenTools.Byaml/3.0.0-alpha1": {
-        "dependencies": {
-          "Syroot.BinaryData": "5.0.0",
-          "Syroot.Maths": "1.5.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Syroot.NintenTools.Byaml.dll": {
-            "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.0.0"
           }
         }
       },
@@ -330,6 +302,14 @@
           }
         }
       },
+      "YamlDotNet/16.3.0": {
+        "runtime": {
+          "lib/net8.0/YamlDotNet.dll": {
+            "assemblyVersion": "16.0.0.0",
+            "fileVersion": "16.3.0.0"
+          }
+        }
+      },
       "ZstdNet/1.4.5": {
         "runtime": {
           "lib/netstandard2.1/ZstdNet.dll": {
@@ -408,27 +388,6 @@
       "sha512": "sha512-lNtlq7dSI/QEbYey+A0xn48z5w4XHSffF8222cC4F4YwTXfEImuiBavQcWjr49LThT/pRmtWJRcqA/PlL+eJ6g==",
       "path": "sixlabors.imagesharp/3.1.5",
       "hashPath": "sixlabors.imagesharp.3.1.5.nupkg.sha512"
-    },
-    "Syroot.BinaryData/5.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-kS0pFPNlpKSoKrLZM5SC3Z6gu2tqz9sROmeShUUNdib9tMWABy2qvtg8pA8mcDjaoAFGC1+0xMbpPm2SIry60w==",
-      "path": "syroot.binarydata/5.0.0",
-      "hashPath": "syroot.binarydata.5.0.0.nupkg.sha512"
-    },
-    "Syroot.Maths/1.5.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-kIQXfe1G5kdHsO8uFV/+FLaYfuSrX1wgT4HUadRGKDzx6K4TBoGuO/6XZF0BFgXV0mW/EKU6kN64qmokDGzepg==",
-      "path": "syroot.maths/1.5.1",
-      "hashPath": "syroot.maths.1.5.1.nupkg.sha512"
-    },
-    "Syroot.NintenTools.Byaml/3.0.0-alpha1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-etHJ5ak8fY5v1Wv/MJlzePXJzjettkh2lEplxDtGTOgwvRKtwv42UW1HeWpmjbj3144wBWV3SVFFt0L+GsCGtQ==",
-      "path": "syroot.nintentools.byaml/3.0.0-alpha1",
-      "hashPath": "syroot.nintentools.byaml.3.0.0-alpha1.nupkg.sha512"
     },
     "Veldrid/4.9.0": {
       "type": "package",
@@ -513,6 +472,13 @@
       "sha512": "sha512-V2yJMl/QKceXEjYEnf2EWcNkUJI5/zE04cNUnawHbdR0wjMHv1dVTLf0IUJk0D0w29FrCWdQQK/n4L4vx0HeQA==",
       "path": "vortice.mathematics/1.4.25",
       "hashPath": "vortice.mathematics.1.4.25.nupkg.sha512"
+    },
+    "YamlDotNet/16.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SgMOdxbz8X65z8hraIs6hOEdnkH6hESTAIUa7viEngHOYaH+6q5XJmwr1+yb9vJpNQ19hCQY69xbFsLtXpobQA==",
+      "path": "yamldotnet/16.3.0",
+      "hashPath": "yamldotnet.16.3.0.nupkg.sha512"
     },
     "ZstdNet/1.4.5": {
       "type": "package",

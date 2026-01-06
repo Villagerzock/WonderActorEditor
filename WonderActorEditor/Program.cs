@@ -22,7 +22,7 @@ namespace WonderActorEditor
 		    }
 	    }
 
-	    public static Actor[] openFiles = {new Actor("test")};
+	    public static List<Actor> openFiles = new(){new Actor("test")};
 
 	    public static ImGuiFileBrowser browser = new ImGuiFileBrowser(openFolder); // oder dein Projektpfad
 	    private static ImGuiRenderable[] renderables =
@@ -79,7 +79,7 @@ namespace WonderActorEditor
 
 		defaultFont = io.Fonts.AddFontFromFileTTF("C:\\Windows\\Fonts\\segoeui.ttf", 18f);
 		titleFont = io.Fonts.AddFontFromFileTTF("C:\\Windows\\Fonts\\segoeui.ttf", 36f);
-		io.ConfigFlags |= ImGuiConfigFlags.DockingEnable | ImGuiConfigFlags.ViewportsEnable;
+		io.ConfigFlags |= ImGuiConfigFlags.DockingEnable;
 
 		imgui.RecreateFontDeviceTexture(); // <- wichtig
 		

@@ -1,4 +1,6 @@
-﻿namespace WonderActorEditor.actor;
+﻿using Vulkan;
+
+namespace WonderActorEditor.actor;
 
 public class Actor
 {
@@ -9,6 +11,18 @@ public class Actor
         get => _name;
     }
     
+    public bool HasUnsavedChanges = false;
+
+    public void MarkUnsavedChanges()
+    {
+        HasUnsavedChanges = true;
+    }
+
+    public void Save()
+    {
+        HasUnsavedChanges = false;
+    }
+
     public List<IComponent> Components = new List<IComponent>();
 
     public Actor(string name)
