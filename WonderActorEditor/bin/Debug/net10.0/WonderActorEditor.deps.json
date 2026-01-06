@@ -9,15 +9,25 @@
       "WonderActorEditor/1.0.0": {
         "dependencies": {
           "NativeFileDialogNET": "2.0.2",
+          "SarcLibrary": "3.3.4",
           "SixLabors.ImageSharp": "3.1.5",
           "Veldrid": "4.9.0",
           "Veldrid.ImGui": "5.89.2-ga121087cad",
           "Veldrid.StartupUtilities": "4.9.0",
           "YamlDotNet": "16.3.0",
+          "Yaz0Library": "1.1.4",
           "ZstdNet": "1.4.5"
         },
         "runtime": {
           "WonderActorEditor.dll": {}
+        }
+      },
+      "CommunityToolkit.HighPerformance/8.4.0": {
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.HighPerformance.dll": {
+            "assemblyVersion": "8.4.0.0",
+            "fileVersion": "8.4.0.1"
+          }
         }
       },
       "ImGui.NET/1.89.2": {
@@ -116,6 +126,26 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {
             "assemblyVersion": "9.0.0.0",
             "fileVersion": "9.0.1.19813"
+          }
+        }
+      },
+      "Revrs/1.1.0": {
+        "runtime": {
+          "lib/net8.0/Revrs.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "SarcLibrary/3.3.4": {
+        "dependencies": {
+          "CommunityToolkit.HighPerformance": "8.4.0",
+          "Revrs": "1.1.0"
+        },
+        "runtime": {
+          "lib/net8.0/SarcLibrary.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -310,6 +340,14 @@
           }
         }
       },
+      "Yaz0Library/1.1.4": {
+        "runtime": {
+          "lib/net7.0/Yaz0Library.dll": {
+            "assemblyVersion": "1.1.4.0",
+            "fileVersion": "1.1.4.0"
+          }
+        }
+      },
       "ZstdNet/1.4.5": {
         "runtime": {
           "lib/netstandard2.1/ZstdNet.dll": {
@@ -325,6 +363,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "CommunityToolkit.HighPerformance/8.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-flxspiBs0G/0GMp7IK2J2ijV9bTG6hEwFc/z6ekHqB6nwRJ4Ry2yLdx+TkbCUYFCl4XhABkAwomeKbT6zM2Zlg==",
+      "path": "communitytoolkit.highperformance/8.4.0",
+      "hashPath": "communitytoolkit.highperformance.8.4.0.nupkg.sha512"
     },
     "ImGui.NET/1.89.2": {
       "type": "package",
@@ -367,6 +412,20 @@
       "sha512": "sha512-U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw==",
       "path": "newtonsoft.json/9.0.1",
       "hashPath": "newtonsoft.json.9.0.1.nupkg.sha512"
+    },
+    "Revrs/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4NrKCOIC8tXxYC2DDzVaLtKtX7qteSuoASRj5Y5JEGdH332ZddHXsV+uVtFTx3Ndxz06+quceyAH2UjCNNukMQ==",
+      "path": "revrs/1.1.0",
+      "hashPath": "revrs.1.1.0.nupkg.sha512"
+    },
+    "SarcLibrary/3.3.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UKosl1XOY6QhCQ88kvUT5ei1acHHvYaLknYRn8PueW/nPLMIChwe3b+FOklyhoztXjZKqCVNeXIr5qOef/EFFg==",
+      "path": "sarclibrary/3.3.4",
+      "hashPath": "sarclibrary.3.3.4.nupkg.sha512"
     },
     "SharpGen.Runtime/2.0.0-beta.13": {
       "type": "package",
@@ -479,6 +538,13 @@
       "sha512": "sha512-SgMOdxbz8X65z8hraIs6hOEdnkH6hESTAIUa7viEngHOYaH+6q5XJmwr1+yb9vJpNQ19hCQY69xbFsLtXpobQA==",
       "path": "yamldotnet/16.3.0",
       "hashPath": "yamldotnet.16.3.0.nupkg.sha512"
+    },
+    "Yaz0Library/1.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MNS1Oay/oJtlOU8AjEZn8cl06KpFzkn+Zh+7RO41wuO5ttAN6NsRMRkQ4eNVLYSkz7zd8VoUSAU+JkY4yhRLhw==",
+      "path": "yaz0library/1.1.4",
+      "hashPath": "yaz0library.1.1.4.nupkg.sha512"
     },
     "ZstdNet/1.4.5": {
       "type": "package",

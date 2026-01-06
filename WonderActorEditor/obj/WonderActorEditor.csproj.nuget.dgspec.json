@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[2.0.2, )"
             },
+            "SarcLibrary": {
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
             "SixLabors.ImageSharp": {
               "target": "Package",
               "version": "[3.1.5, )"
@@ -67,6 +71,10 @@
             "YamlDotNet": {
               "target": "Package",
               "version": "[16.3.0, )"
+            },
+            "Yaz0Library": {
+              "target": "Package",
+              "version": "[1.1.4, )"
             },
             "ZstdNet": {
               "target": "Package",

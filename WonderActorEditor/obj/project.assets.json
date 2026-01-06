@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net10.0": {
+      "CommunityToolkit.HighPerformance/8.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CommunityToolkit.HighPerformance.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.HighPerformance.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "ImGui.NET/1.89.2": {
         "type": "package",
         "compile": {
@@ -115,6 +128,32 @@
         "type": "package",
         "build": {
           "buildTransitive/PolySharp.targets": {}
+        }
+      },
+      "Revrs/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Revrs.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Revrs.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SarcLibrary/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.HighPerformance": "8.4.0",
+          "Revrs": "1.1.0"
+        },
+        "compile": {
+          "lib/net8.0/SarcLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/SarcLibrary.dll": {}
         }
       },
       "SharpGen.Runtime/2.0.0-beta.13": {
@@ -416,6 +455,15 @@
           }
         }
       },
+      "Yaz0Library/1.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Yaz0Library.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/Yaz0Library.dll": {}
+        }
+      },
       "ZstdNet/1.4.5": {
         "type": "package",
         "compile": {
@@ -431,6 +479,32 @@
     }
   },
   "libraries": {
+    "CommunityToolkit.HighPerformance/8.4.0": {
+      "sha512": "flxspiBs0G/0GMp7IK2J2ijV9bTG6hEwFc/z6ekHqB6nwRJ4Ry2yLdx+TkbCUYFCl4XhABkAwomeKbT6zM2Zlg==",
+      "type": "package",
+      "path": "communitytoolkit.highperformance/8.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "License.md",
+        "ThirdPartyNotices.txt",
+        "communitytoolkit.highperformance.8.4.0.nupkg.sha512",
+        "communitytoolkit.highperformance.nuspec",
+        "lib/net7.0/CommunityToolkit.HighPerformance.dll",
+        "lib/net7.0/CommunityToolkit.HighPerformance.pdb",
+        "lib/net7.0/CommunityToolkit.HighPerformance.xml",
+        "lib/net8.0/CommunityToolkit.HighPerformance.dll",
+        "lib/net8.0/CommunityToolkit.HighPerformance.pdb",
+        "lib/net8.0/CommunityToolkit.HighPerformance.xml",
+        "lib/netstandard2.0/CommunityToolkit.HighPerformance.dll",
+        "lib/netstandard2.0/CommunityToolkit.HighPerformance.pdb",
+        "lib/netstandard2.0/CommunityToolkit.HighPerformance.xml",
+        "lib/netstandard2.1/CommunityToolkit.HighPerformance.dll",
+        "lib/netstandard2.1/CommunityToolkit.HighPerformance.pdb",
+        "lib/netstandard2.1/CommunityToolkit.HighPerformance.xml"
+      ]
+    },
     "ImGui.NET/1.89.2": {
       "sha512": "JcId8ENjqaV1IUzF7PmXLO6m+v1P6o3sUXb8a+ar44MeT+ufdf5sB1UeiahXysacL17zPt2DzbYlwGnqAIx+hA==",
       "type": "package",
@@ -554,6 +628,35 @@
         "icon.png",
         "polysharp.1.10.0.nupkg.sha512",
         "polysharp.nuspec"
+      ]
+    },
+    "Revrs/1.1.0": {
+      "sha512": "4NrKCOIC8tXxYC2DDzVaLtKtX7qteSuoASRj5Y5JEGdH332ZddHXsV+uVtFTx3Ndxz06+quceyAH2UjCNNukMQ==",
+      "type": "package",
+      "path": "revrs/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.md",
+        "icon.png",
+        "lib/net8.0/Revrs.dll",
+        "lib/net8.0/Revrs.xml",
+        "revrs.1.1.0.nupkg.sha512",
+        "revrs.nuspec"
+      ]
+    },
+    "SarcLibrary/3.3.4": {
+      "sha512": "UKosl1XOY6QhCQ88kvUT5ei1acHHvYaLknYRn8PueW/nPLMIChwe3b+FOklyhoztXjZKqCVNeXIr5qOef/EFFg==",
+      "type": "package",
+      "path": "sarclibrary/3.3.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "Readme.md",
+        "lib/net8.0/SarcLibrary.dll",
+        "sarclibrary.3.3.4.nupkg.sha512",
+        "sarclibrary.nuspec"
       ]
     },
     "SharpGen.Runtime/2.0.0-beta.13": {
@@ -845,6 +948,20 @@
         "yamldotnet.nuspec"
       ]
     },
+    "Yaz0Library/1.1.4": {
+      "sha512": "MNS1Oay/oJtlOU8AjEZn8cl06KpFzkn+Zh+7RO41wuO5ttAN6NsRMRkQ4eNVLYSkz7zd8VoUSAU+JkY4yhRLhw==",
+      "type": "package",
+      "path": "yaz0library/1.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net7.0/Yaz0Library.dll",
+        "yaz0library.1.1.4.nupkg.sha512",
+        "yaz0library.nuspec"
+      ]
+    },
     "ZstdNet/1.4.5": {
       "sha512": "fi9aP1QY3ZenIMUW1pxdSjku6lYAUjScrwfXSXT1qyKtTdLxOIzeBMe+w/hQm0vMsvQnjcFInByMrIT7AlXUHA==",
       "type": "package",
@@ -868,11 +985,13 @@
   "projectFileDependencyGroups": {
     "net10.0": [
       "NativeFileDialogNET >= 2.0.2",
+      "SarcLibrary >= 3.3.4",
       "SixLabors.ImageSharp >= 3.1.5",
       "Veldrid >= 4.9.0",
       "Veldrid.ImGui >= 5.89.2-ga121087cad",
       "Veldrid.StartupUtilities >= 4.9.0",
       "YamlDotNet >= 16.3.0",
+      "Yaz0Library >= 1.1.4",
       "ZstdNet >= 1.4.5"
     ]
   },
@@ -923,6 +1042,10 @@
             "target": "Package",
             "version": "[2.0.2, )"
           },
+          "SarcLibrary": {
+            "target": "Package",
+            "version": "[3.3.4, )"
+          },
           "SixLabors.ImageSharp": {
             "target": "Package",
             "version": "[3.1.5, )"
@@ -942,6 +1065,10 @@
           "YamlDotNet": {
             "target": "Package",
             "version": "[16.3.0, )"
+          },
+          "Yaz0Library": {
+            "target": "Package",
+            "version": "[1.1.4, )"
           },
           "ZstdNet": {
             "target": "Package",

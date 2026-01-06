@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using System.Text;
 using ImGuiNET;
 using Veldrid;
 using Veldrid.Sdl2;
@@ -6,6 +7,7 @@ using Veldrid.StartupUtilities;
 using NativeFileDialogNET;
 using WonderActorEditor.actor;
 using WonderActorEditor.components;
+using WonderActorEditor.compression;
 
 namespace WonderActorEditor
 {
@@ -34,7 +36,8 @@ namespace WonderActorEditor
 	    public static Type[] allComponentTypes =
 	    {
 			typeof(YAMLComponent),
-			typeof(ModelBindParamComponent)
+			typeof(ModelBindParamComponent),
+			typeof(DamageReactionComponent)
 	    };
 	    public static ImFontPtr defaultFont;
 	    public static ImFontPtr titleFont;
@@ -43,6 +46,9 @@ namespace WonderActorEditor
         public static void Main(string[] args)
         {
             Console.WriteLine("Starting...");
+
+            TestDecompress();
+            
 // Window + GraphicsDevice erstellen
 		VeldridStartup.CreateWindowAndGraphicsDevice(
 			new WindowCreateInfo(
@@ -135,6 +141,11 @@ namespace WonderActorEditor
 		imgui.Dispose();
 		cl.Dispose();
 		gd.Dispose();
+        }
+
+        private static void TestDecompress()
+        {
+	        
         }
 
         private static void DrawWindows()

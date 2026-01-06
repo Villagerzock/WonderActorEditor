@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "uUaMfgYEbE8=",
+  "dgSpecHash": "nMaEAtd1Uhc=",
   "success": true,
   "projectFilePath": "C:\\Users\\Marvin\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\WonderActorEditor.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Marvin\\.nuget\\packages\\communitytoolkit.highperformance\\8.4.0\\communitytoolkit.highperformance.8.4.0.nupkg.sha512",
     "C:\\Users\\Marvin\\.nuget\\packages\\imgui.net\\1.89.2\\imgui.net.1.89.2.nupkg.sha512",
     "C:\\Users\\Marvin\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\2.0.3\\microsoft.dotnet.platformabstractions.2.0.3.nupkg.sha512",
     "C:\\Users\\Marvin\\.nuget\\packages\\microsoft.extensions.dependencymodel\\2.0.3\\microsoft.extensions.dependencymodel.2.0.3.nupkg.sha512",
@@ -11,6 +12,8 @@
     "C:\\Users\\Marvin\\.nuget\\packages\\nativelibraryloader\\1.0.13\\nativelibraryloader.1.0.13.nupkg.sha512",
     "C:\\Users\\Marvin\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\Marvin\\.nuget\\packages\\polysharp\\1.10.0\\polysharp.1.10.0.nupkg.sha512",
+    "C:\\Users\\Marvin\\.nuget\\packages\\revrs\\1.1.0\\revrs.1.1.0.nupkg.sha512",
+    "C:\\Users\\Marvin\\.nuget\\packages\\sarclibrary\\3.3.4\\sarclibrary.3.3.4.nupkg.sha512",
     "C:\\Users\\Marvin\\.nuget\\packages\\sharpgen.runtime\\2.0.0-beta.13\\sharpgen.runtime.2.0.0-beta.13.nupkg.sha512",
     "C:\\Users\\Marvin\\.nuget\\packages\\sharpgen.runtime.com\\2.0.0-beta.13\\sharpgen.runtime.com.2.0.0-beta.13.nupkg.sha512",
     "C:\\Users\\Marvin\\.nuget\\packages\\sixlabors.imagesharp\\3.1.5\\sixlabors.imagesharp.3.1.5.nupkg.sha512",
@@ -27,6 +30,7 @@
     "C:\\Users\\Marvin\\.nuget\\packages\\vortice.dxgi\\2.3.0\\vortice.dxgi.2.3.0.nupkg.sha512",
     "C:\\Users\\Marvin\\.nuget\\packages\\vortice.mathematics\\1.4.25\\vortice.mathematics.1.4.25.nupkg.sha512",
     "C:\\Users\\Marvin\\.nuget\\packages\\yamldotnet\\16.3.0\\yamldotnet.16.3.0.nupkg.sha512",
+    "C:\\Users\\Marvin\\.nuget\\packages\\yaz0library\\1.1.4\\yaz0library.1.1.4.nupkg.sha512",
     "C:\\Users\\Marvin\\.nuget\\packages\\zstdnet\\1.4.5\\zstdnet.1.4.5.nupkg.sha512"
   ],
   "logs": [

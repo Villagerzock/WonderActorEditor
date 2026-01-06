@@ -102,3 +102,7 @@ C:\Users\Marvin\RiderProjects\WonderActorEditor\WonderActorEditor\bin\Debug\net1
 C:\Users\Marvin\RiderProjects\WonderActorEditor\WonderActorEditor\bin\Debug\net10.0\x86\libzstd.dll
 C:\Users\Marvin\RiderProjects\WonderActorEditor\WonderActorEditor\bin\Debug\net10.0\ZstdNet.dll
 C:\Users\Marvin\RiderProjects\WonderActorEditor\WonderActorEditor\bin\Debug\net10.0\YamlDotNet.dll
+C:\Users\Marvin\RiderProjects\WonderActorEditor\WonderActorEditor\bin\Debug\net10.0\CommunityToolkit.HighPerformance.dll
+C:\Users\Marvin\RiderProjects\WonderActorEditor\WonderActorEditor\bin\Debug\net10.0\Revrs.dll
+C:\Users\Marvin\RiderProjects\WonderActorEditor\WonderActorEditor\bin\Debug\net10.0\SarcLibrary.dll
+C:\Users\Marvin\RiderProjects\WonderActorEditor\WonderActorEditor\bin\Debug\net10.0\Yaz0Library.dll
