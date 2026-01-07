@@ -37,7 +37,8 @@ namespace WonderActorEditor
 	    {
 			typeof(YAMLComponent),
 			typeof(ModelBindParamComponent),
-			typeof(DamageReactionComponent)
+			typeof(DamageReactionComponent),
+			typeof(ReceiveNumToDieComponent)
 	    };
 	    public static ImFontPtr defaultFont;
 	    public static ImFontPtr titleFont;
