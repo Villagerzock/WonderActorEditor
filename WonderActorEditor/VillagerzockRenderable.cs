@@ -18,82 +18,85 @@ public class VillagerzockRenderable : ImGuiRenderable
             ImGui.End();
         }
 
-        if (ImGui.Begin("Edit Actor"))
+        if (Program.openFiles.Count > 0)
         {
-            if (ImGui.BeginTabBar("openFiles"))
+            if (ImGui.Begin("Edit Actor"))
             {
-                for (int i = 0; i < Program.openFiles.Count; i++)
+                if (ImGui.BeginTabBar("openFiles"))
                 {
-                    bool shouldClose = true;
-                    Actor currentActor = Program.openFiles[i];
-                    if (ImGui.BeginTabItem(currentActor.Name,ref shouldClose, currentActor.HasUnsavedChanges ? ImGuiTabItemFlags.UnsavedDocument : ImGuiTabItemFlags.None))
+                    for (int i = 0; i < Program.openFiles.Count; i++)
                     {
-                        if (!shouldClose && !currentActor.HasUnsavedChanges)
+                        bool shouldClose = true;
+                        Actor currentActor = Program.openFiles[i];
+                        if (ImGui.BeginTabItem(currentActor.Name,ref shouldClose, currentActor.HasUnsavedChanges ? ImGuiTabItemFlags.UnsavedDocument : ImGuiTabItemFlags.None))
                         {
-                            Program.openFiles.RemoveAt(i);
-                            i--;
-                            ImGui.EndTabItem();
-                            continue;
-                        }
-                        if (!shouldClose && currentActor.HasUnsavedChanges)
-                        {
-                            _closeAfterSaving = currentActor;
-                        }
-                        float spacing = ImGui.GetStyle().ItemSpacing.X;
-                        float firstPart = (ImGui.GetContentRegionAvail().X - spacing) * 0.15f;
-                        float secondPart = (ImGui.GetContentRegionAvail().X - spacing) - firstPart;
-                        float height = 0; // 0 = nimmt restliche Höhe
-
-                        ImGui.BeginChild("##ActorRenderer", new Vector2(firstPart, height), false);
-
-                        ImGui.BeginChild("##ActorModelRenderer", new Vector2(firstPart, firstPart), true);
-					        
-                        ImGui.Text("Here Comes A Model");
-                        ImGui.EndChild();
-                        ImGui.PushFont(Program.titleFont);
-                        ImGui.Text(currentActor.Name);
-                        ImGui.PushFont(Program.defaultFont);
-					        
-                        ImGui.EndChild();
-
-                        ImGui.SameLine();
-
-                        ImGui.BeginChild("##ActorComponents", new Vector2(secondPart, height), true);
-                        for (int j = 0; j < currentActor.Components.Count; j++)
-                        {
-                            ImGui.BeginGroup();
-                           
-                            IComponent component = currentActor.Components[j];
-                            
-                            ImGui.PushFont(Program.titleFont);
-                            ImGui.Text(component.GetName());
-                            ImGui.PushFont(Program.defaultFont);
-                            
-                            ImGui.SameLine();
-                            
-                            ImGui.BeginGroup();
-                            component.Render(j, currentActor);
-                            if (ImGui.Button("Remove##$"+j+"$"+i))
+                            if (!shouldClose && !currentActor.HasUnsavedChanges)
                             {
-                                currentActor.Components.RemoveAt(j);
-                                j--;
+                                Program.openFiles.RemoveAt(i);
+                                i--;
+                                ImGui.EndTabItem();
+                                continue;
                             }
-                            ImGui.EndGroup();
+                            if (!shouldClose && currentActor.HasUnsavedChanges)
+                            {
+                                _closeAfterSaving = currentActor;
+                            }
+                            float spacing = ImGui.GetStyle().ItemSpacing.X;
+                            float firstPart = (ImGui.GetContentRegionAvail().X - spacing) * 0.15f;
+                            float secondPart = (ImGui.GetContentRegionAvail().X - spacing) - firstPart;
+                            float height = 0; // 0 = nimmt restliche Höhe
+
+                            ImGui.BeginChild("##ActorRenderer", new Vector2(firstPart, height), false);
+
+                            ImGui.BeginChild("##ActorModelRenderer", new Vector2(firstPart, firstPart), true);
+					        
+                            ImGui.Text("Here Comes A Model");
+                            ImGui.EndChild();
+                            ImGui.PushFont(Program.titleFont);
+                            ImGui.Text(currentActor.Name);
+                            ImGui.PushFont(Program.defaultFont);
+					        
+                            ImGui.EndChild();
+
+                            ImGui.SameLine();
+
+                            ImGui.BeginChild("##ActorComponents", new Vector2(secondPart, height), true);
+                            for (int j = 0; j < currentActor.Components.Count; j++)
+                            {
+                                ImGui.BeginGroup();
+                           
+                                IComponent component = currentActor.Components[j];
                             
-                            ImGui.EndGroup();
+                                ImGui.PushFont(Program.titleFont);
+                                ImGui.Text(component.GetName());
+                                ImGui.PushFont(Program.defaultFont);
+                            
+                                ImGui.SameLine();
+                            
+                                ImGui.BeginGroup();
+                                component.Render(j, currentActor);
+                                if (ImGui.Button("Remove##$"+j+"$"+i))
+                                {
+                                    currentActor.Components.RemoveAt(j);
+                                    j--;
+                                }
+                                ImGui.EndGroup();
+                            
+                                ImGui.EndGroup();
+                            }
+                            if (ImGui.Button("+ Add Component", new Vector2(-1, 40)))
+                            {
+                                _addComponentTo = currentActor;
+                            }
+                            ImGui.EndChild();
                         }
-                        if (ImGui.Button("+ Add Component", new Vector2(-1, 40)))
-                        {
-                            _addComponentTo = currentActor;
-                        }
-                        ImGui.EndChild();
+                        ImGui.EndTabItem();
                     }
-                    ImGui.EndTabItem();
+                    ImGui.EndTabBar();
                 }
-                ImGui.EndTabBar();
             }
+            ImGui.End();
         }
-        ImGui.End();
             
         if (_addComponentTo != null)
         {

@@ -22,20 +22,15 @@ public class DamageReactionComponent : IComponent
         "Fire",
         "HipDropDrill"
     };
-    private Dictionary<string, string> valueMap = new Dictionary<string, string>();
+    private Dictionary<string, string> _valueMap = new();
     public void Render(int id, Actor parent)
     {
         ImGui.Text("Enter Values:");
-        float half = ImGui.GetContentRegionAvail().X * 0.5f;
         foreach (string damageType in DamageTypes)
         {
-            ImGui.SetNextItemWidth(half);
-            ImGui.Text(damageType);
-            ImGui.SameLine();
-            ImGui.SetNextItemWidth(half);
-            string val = valueMap.GetValueOrDefault(damageType,"");
-            ImGui.InputText("##damageReaction$" + damageType + "$" + id, ref val, 64);
-            valueMap[damageType] = val;
+            string val = _valueMap.GetValueOrDefault(damageType,"");
+            ImGui.InputText($"{damageType}##damageReaction${id}", ref val, 64);
+            _valueMap[damageType] = val;
         }
     }
 
