@@ -42,6 +42,7 @@ namespace WonderActorEditor
 	    };
 	    public static ImFontPtr defaultFont;
 	    public static ImFontPtr titleFont;
+	    public static GraphicsDevice gd;
 
 	    
         public static void Main(string[] args)
@@ -74,6 +75,7 @@ namespace WonderActorEditor
 
 		// CommandList für Rendering
 		CommandList cl = gd.ResourceFactory.CreateCommandList();
+		Program.gd = gd;
 
 		// ImGui Renderer
 		ImGuiRenderer imgui = new ImGuiRenderer(
