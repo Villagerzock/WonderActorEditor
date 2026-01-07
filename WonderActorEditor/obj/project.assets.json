@@ -996,19 +996,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Marvin\\.nuget\\packages\\": {}
+    "C:\\Users\\ssiebm\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marvin\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\WonderActorEditor.csproj",
+      "projectUniqueName": "C:\\Users\\ssiebm\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\WonderActorEditor.csproj",
       "projectName": "WonderActorEditor",
-      "projectPath": "C:\\Users\\Marvin\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\WonderActorEditor.csproj",
-      "packagesPath": "C:\\Users\\Marvin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Marvin\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\obj\\",
+      "projectPath": "C:\\Users\\ssiebm\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\WonderActorEditor.csproj",
+      "packagesPath": "C:\\Users\\ssiebm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ssiebm\\RiderProjects\\WonderActorEditor\\WonderActorEditor\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Marvin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ssiebm\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -1091,7 +1091,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Marvin\\.dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Users\\ssiebm\\.dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

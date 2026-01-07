@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WonderActorEditor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+820be527a8ecafc0f4eb93eaa192a0c58620a4fe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c75ba4b53f3766f81c07fe16e8a14bccbe1695d")]
 [assembly: System.Reflection.AssemblyProductAttribute("WonderActorEditor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WonderActorEditor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

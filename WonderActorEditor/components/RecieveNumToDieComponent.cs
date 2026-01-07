@@ -1,15 +1,9 @@
-﻿using WonderActorEditor.actor;
+﻿using ImGuiNET;
+using WonderActorEditor.actor;
 using YamlDotNet.RepresentationModel;
 
 namespace WonderActorEditor
 {
-    public class RecieveNumToDieComponent
-    using ImGuiNET;
-    using WonderActorEditor.actor;
-    using YamlDotNet.RepresentationModel;
-
-    namespace WonderActorEditor.components;
-
     [ComponentData(
         "Receive Num To Die",
         "Specifies the number of hits the actor can take before dying"
@@ -48,3 +42,4 @@ namespace WonderActorEditor
             };
         }
     }
+}
