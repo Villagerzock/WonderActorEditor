@@ -33,13 +33,7 @@ namespace WonderActorEditor
 			    new CitraRenderable()
 		    };
 
-	    public static Type[] allComponentTypes =
-	    {
-			typeof(YAMLComponent),
-			typeof(ModelBindParamComponent),
-			typeof(DamageReactionComponent),
-			typeof(ReceiveNumToDieComponent)
-	    };
+	    
 	    public static ImFontPtr defaultFont;
 	    public static ImFontPtr titleFont;
 	    public static GraphicsDevice gd;

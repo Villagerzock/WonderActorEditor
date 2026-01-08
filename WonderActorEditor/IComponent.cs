@@ -1,11 +1,20 @@
 ﻿using System.Reflection;
 using WonderActorEditor.actor;
+using WonderActorEditor.components;
 using YamlDotNet.RepresentationModel;
 
 namespace WonderActorEditor;
 
 public interface IComponent
 {
+    
+    public static Type[] allComponentTypes =
+    {
+        typeof(YAMLComponent),
+        typeof(ModelBindParamComponent),
+        typeof(DamageReactionComponent),
+        typeof(ReceiveNumToDieComponent)
+    };
     void Render(int id, Actor parent);
     string GetName()
     {

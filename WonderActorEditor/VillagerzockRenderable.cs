@@ -109,7 +109,7 @@ public class VillagerzockRenderable : ImGuiRenderable
                     _addComponentTo = null;
                     return;
                 }
-                foreach (Type componentType in Program.allComponentTypes)
+                foreach (Type componentType in IComponent.allComponentTypes)
                 {
                     ComponentData? data = componentType.GetCustomAttribute<ComponentData>();
                     if (data == null) continue;
