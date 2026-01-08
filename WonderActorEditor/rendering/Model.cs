@@ -10,7 +10,7 @@ public class Model
     {
         public Vector3 Position;
         public Vector3 Normal;
-        public Vector2 UV;
+        public Vector2 Uv;
     }
     
     public Vertex[] vertices;
